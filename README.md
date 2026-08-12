@@ -1,7 +1,9 @@
 
-🧮 Modern Calculator
+Build-Calculator-Project
 
-A professional, responsive calculator built using **HTML, CSS, and JavaScript**.
+A responsive calculator built with HTML, CSS, and JavaScript. Supports basic arithmetic operations, percentage, decimal calculations, clear/delete functions, real-time results, and keyboard support.
+
+
 
 The project demonstrates DOM manipulation, event handling, arithmetic operations, keyboard interaction, responsive design, and clean JavaScript state management.
 

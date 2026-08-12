@@ -101,7 +101,7 @@ Or use **VS Code Live Server**.
 
  Calculator Interface
     
-       (<img width="1777" height="911" alt="Screenshot 2026-08-11 235633" src="https://github.com/user-attachments/assets/0e42581f-e3c5-4cba-b6a3-97de35d4c3c5" />
+ <img width="1777" height="911" alt="Image" src="https://github.com/user-attachments/assets/d58b4d2a-e8d2-467d-85f0-b49564d99d76" />  
 
 
 > A modern and responsive calculator interface with a clean display, arithmetic operation buttons, clear/delete controls, percentage functionality, and keyboard support.

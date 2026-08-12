@@ -40,7 +40,7 @@ Add your deployed website URL here.
 
  📂 Project Structure
 
-.
+
 calculator/
 │
 ├── index.html
@@ -101,7 +101,8 @@ Or use **VS Code Live Server**.
 
  Calculator Interface
     
-       (<Screenshot 2026-08-11 235633.png>)
+       (<img width="1777" height="911" alt="Screenshot 2026-08-11 235633" src="https://github.com/user-attachments/assets/0e42581f-e3c5-4cba-b6a3-97de35d4c3c5" />
+
 
 > A modern and responsive calculator interface with a clean display, arithmetic operation buttons, clear/delete controls, percentage functionality, and keyboard support.
 

@@ -1,0 +1,403 @@
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   ROOT VARIABLES
+========================================= */
+
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --calculator-bg: #111827;
+
+    --display-bg: #020617;
+
+    --key-bg: #1e293b;
+    --key-hover: #334155;
+
+    --operator: #6366f1;
+    --operator-hover: #818cf8;
+
+    --equals: #22c55e;
+    --equals-hover: #4ade80;
+
+    --danger: #ef4444;
+    --danger-hover: #f87171;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+
+    --border: rgba(255, 255, 255, 0.08);
+
+    --shadow:
+        0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #1e3a8a 0%,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            var(--bg-primary),
+            var(--bg-secondary)
+        );
+
+    color: var(--text-primary);
+}
+
+
+/* =========================================
+   APP
+========================================= */
+
+.app {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================================
+   CALCULATOR
+========================================= */
+
+.calculator {
+    width: min(100%, 390px);
+
+    padding: 22px;
+
+    background: rgba(17, 24, 39, 0.94);
+
+    border: 1px solid var(--border);
+
+    border-radius: 28px;
+
+    box-shadow: var(--shadow);
+
+    backdrop-filter: blur(20px);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.calculator__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.calculator__header h1 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.calculator__status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    color: #86efac;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.calculator__status::before {
+    content: "";
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+}
+
+
+/* =========================================
+   DISPLAY
+========================================= */
+
+.display {
+    min-height: 125px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: 20px;
+
+    background: var(--display-bg);
+}
+
+.display__expression {
+    width: 100%;
+
+    min-height: 24px;
+
+    margin-bottom: 8px;
+
+    color: var(--text-secondary);
+
+    font-size: 0.95rem;
+
+    text-align: right;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.display__value {
+    width: 100%;
+
+    color: var(--text-primary);
+
+    font-size: clamp(2rem, 8vw, 3rem);
+
+    font-weight: 700;
+
+    text-align: right;
+
+    white-space: nowrap;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.display__value::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* =========================================
+   KEYPAD
+========================================= */
+
+.keypad {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.key {
+    min-height: 65px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    background: var(--key-bg);
+
+    color: var(--text-primary);
+
+    font-size: 1.2rem;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.key:hover {
+    background: var(--key-hover);
+
+    transform: translateY(-2px);
+}
+
+.key:active {
+    transform: scale(0.94);
+}
+
+.key:focus-visible {
+    outline: 3px solid rgba(99, 102, 241, 0.6);
+
+    outline-offset: 2px;
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.key--secondary {
+    color: #cbd5e1;
+}
+
+
+/* =========================================
+   OPERATOR
+========================================= */
+
+.key--operator {
+    background: var(--operator);
+
+    border-color: transparent;
+}
+
+.key--operator:hover {
+    background: var(--operator-hover);
+}
+
+
+/* =========================================
+   CLEAR
+========================================= */
+
+.key--danger {
+    background: var(--danger);
+
+    border-color: transparent;
+}
+
+.key--danger:hover {
+    background: var(--danger-hover);
+}
+
+
+/* =========================================
+   EQUALS
+========================================= */
+
+.key--equals {
+    background: var(--equals);
+
+    border-color: transparent;
+}
+
+.key--equals:hover {
+    background: var(--equals-hover);
+}
+
+
+/* =========================================
+   ZERO BUTTON
+========================================= */
+
+.key--zero {
+    grid-column: span 2;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.calculator__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 18px;
+
+    color: var(--text-secondary);
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 420px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .calculator {
+        padding: 16px;
+
+        border-radius: 22px;
+    }
+
+    .key {
+        min-height: 60px;
+
+        border-radius: 14px;
+
+        font-size: 1.05rem;
+    }
+
+    .display {
+        min-height: 115px;
+
+        padding: 16px;
+    }
+}
+
+
+@media (max-width: 330px) {
+
+    .key {
+        min-height: 55px;
+    }
+
+    .calculator__footer {
+        display: none;
+    }
+}
+

@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A modern and responsive calculator built with HTML, CSS, and JavaScript."
+    >
+
+    <meta
+        name="author"
+        content="Ananya Sinha"
+    >
+
+    <title>Calculator | HTML CSS JavaScript</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section
+            class="calculator"
+            aria-label="Calculator"
+        >
+
+            <!-- Calculator Header -->
+            <header class="calculator__header">
+                <h1>Calculator</h1>
+                <span class="calculator__status">Online</span>
+            </header>
+
+            <!-- Display -->
+            <div
+                class="display"
+                aria-live="polite"
+                aria-atomic="true"
+            >
+                <div
+                    class="display__expression"
+                    id="expression"
+                ></div>
+
+                <div
+                    class="display__value"
+                    id="display"
+                >
+                    0
+                </div>
+            </div>
+
+            <!-- Calculator Buttons -->
+            <div class="keypad">
+
+                <!-- Row 1 -->
+                <button
+                    class="key key--danger"
+                    type="button"
+                    data-action="clear"
+                    aria-label="Clear calculator"
+                >
+                    AC
+                </button>
+
+                <button
+                    class="key key--secondary"
+                    type="button"
+                    data-action="delete"
+                    aria-label="Delete last character"
+                >
+                    DEL
+                </button>
+
+                <button
+                    class="key key--secondary"
+                    type="button"
+                    data-action="percentage"
+                    aria-label="Percentage"
+                >
+                    %
+                </button>
+
+                <button
+                    class="key key--operator"
+                    type="button"
+                    data-operation="/"
+                    aria-label="Divide"
+                >
+                    ÷
+                </button>
+
+                <!-- Row 2 -->
+                <button
+                    class="key"
+                    type="button"
+                    data-number="7"
+                >
+                    7
+                </button>
+
+                <button
+                    class="key"
+                    type="button"
+                    data-number="8"
+                >
+                    8
+                </button>
+
+                <button
+                    class="key"
+                    type="button"
+                    data-number="9"
+                >
+                    9
+                </button>
+
+                <button
+                    class="key key--operator"
+                    type="button"
+                    data-operation="*"
+                    aria-label="Multiply"
+                >
+                    ×
+                </button>
+
+                <!-- Row 3 -->
+                <button
+                    class="key"
+                    type="button"
+                    data-number="4"
+                >
+                    4
+                </button>
+
+                <button
+                    class="key"
+                    type="button"
+                    data-number="5"
+                >
+                    5
+                </button>
+
+                <button
+                    class="key"
+                    type="button"
+                    data-number="6"
+                >
+                    6
+                </button>
+
+                <button
+                    class="key key--operator"
+                    type="button"
+                    data-operation="-"
+                    aria-label="Subtract"
+                >
+                    −
+                </button>
+
+                <!-- Row 4 -->
+                <button
+                    class="key"
+                    type="button"
+                    data-number="1"
+                >
+                    1
+                </button>
+
+                <button
+                    class="key"
+                    type="button"
+                    data-number="2"
+                >
+                    2
+                </button>
+
+                <button
+                    class="key"
+                    type="button"
+                    data-number="3"
+                >
+                    3
+                </button>
+
+                <button
+                    class="key key--operator"
+                    type="button"
+                    data-operation="+"
+                    aria-label="Add"
+                >
+                    +
+                </button>
+
+                <!-- Row 5 -->
+                <button
+                    class="key key--zero"
+                    type="button"
+                    data-number="0"
+                >
+                    0
+                </button>
+
+                <button
+                    class="key"
+                    type="button"
+                    data-number="."
+                    aria-label="Decimal point"
+                >
+                    .
+                </button>
+
+                <button
+                    class="key key--equals"
+                    type="button"
+                    data-action="calculate"
+                    aria-label="Calculate result"
+                >
+                    =
+                </button>
+
+            </div>
+
+            <!-- Keyboard Hint -->
+            <footer class="calculator__footer">
+                <span>⌨ Keyboard supported</span>
+                <span>•</span>
+                <span>ESC to clear</span>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+
